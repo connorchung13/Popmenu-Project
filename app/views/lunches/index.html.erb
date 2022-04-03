@@ -1,0 +1,12 @@
+
+<h1>Lunches</h1>
+
+<div id="Lunches">
+  <% @lunches.each do |lunch| %>
+    <%= render lunch %>
+    <br><br/>
+  <% end %>
+</div>
+<% if user_signed_in? %>
+<%= link_to "New Lunch", new_lunch_path, class:"btn btn-secondary" %>
+<% end %>

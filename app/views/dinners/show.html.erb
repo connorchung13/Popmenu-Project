@@ -1,0 +1,14 @@
+
+<%= render @dinner %>
+
+<% if user_signed_in? %>
+<div>
+  <%= link_to "Edit this Dinner", edit_dinner_path(@dinner), class:"btn btn-info" %> 
+  
+  <br/><br/>
+
+  <%= button_to "Delete this Dinner", @dinner, method: :delete, class:"btn btn-danger" %>
+<% else %>
+  <%= link_to "Back to Dinners", dinners_path, class:"btn btn-info" %>
+<% end %>
+</div>

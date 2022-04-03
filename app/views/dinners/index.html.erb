@@ -1,0 +1,12 @@
+
+<h1>Dinners</h1>
+
+<div id="dinners">
+  <% @dinners.each do |dinner| %>
+    <%= render dinner %>
+    <br/><br/>
+  <% end %>
+</div>
+<% if user_signed_in? %>
+<%= link_to "New Dinner", new_dinner_path, class:"btn btn-secondary" %>
+<% end %>

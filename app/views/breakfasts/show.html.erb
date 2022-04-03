@@ -1,0 +1,14 @@
+
+<%= render @breakfast %>
+
+<% if user_signed_in? %>
+<div>
+  <%= link_to "Edit this Breakfast", edit_breakfast_path(@breakfast), class:"btn btn-info" %>
+  
+  <br/><br/>
+
+  <%= button_to "Delete this Breakfast", @breakfast, method: :delete, class:"btn btn-danger" %>
+<% else %>
+  <%= link_to "Back to Breakfasts", breakfasts_path, class:"btn btn-info" %>
+<% end %>
+</div>
